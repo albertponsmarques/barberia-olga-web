@@ -8,7 +8,6 @@ import Navigation from "./components/NavbarWind";
 
 ReactDOM.render(
   <Router>
-    <Navigation />
     <Routes>
       <Route path="/" element={<Home />} />
     </Routes>
