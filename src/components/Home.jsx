@@ -1,14 +1,15 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import Logo from "../resources/barber.svg";
+import Imagen from "../resources/imagenhome.jpg";
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-]
+  { name: "Inicio", href: "#" },
+  { name: "Quienes somos", href: "#" },
+  { name: "Donde estamos", href: "#" },
+];
 
 export default function Example() {
   return (
@@ -27,15 +28,18 @@ export default function Example() {
 
           <Popover>
             <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
-              <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+              <nav
+                className="relative flex items-center justify-between sm:h-10 lg:justify-start"
+                aria-label="Global"
+              >
                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
                     <a href="#">
-                      <span className="sr-only">Workflow</span>
+                      <span className="sr-only">Barberia Olga</span>
                       <img
-                        alt="Workflow"
+                        alt="Barberia Olga"
                         className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        src={Logo}
                       />
                     </a>
                     <div className="-mr-2 flex items-center md:hidden">
@@ -48,12 +52,19 @@ export default function Example() {
                 </div>
                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                   {navigation.map((item) => (
-                    <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="font-medium mx-7 text-gray-500 hover:text-gray-900"
+                    >
                       {item.name}
                     </a>
                   ))}
-                  <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                    Log in
+                  <a
+                    href="#"
+                    className="text-lg font-extrabold text-brb-red hover:text-brb-blue hover:animate-pulse"
+                  >
+                    Pedir cita
                   </a>
                 </div>
               </nav>
@@ -77,8 +88,8 @@ export default function Example() {
                     <div>
                       <img
                         className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                        alt=""
+                        src={Logo}
+                        alt="Barberia Olga"
                       />
                     </div>
                     <div className="-mr-2">
@@ -101,7 +112,7 @@ export default function Example() {
                   </div>
                   <a
                     href="#"
-                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
+                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 "
                   >
                     Log in
                   </a>
@@ -113,28 +124,41 @@ export default function Example() {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Data to enrich your</span>{' '}
-                <span className="block text-indigo-600 xl:inline">online business</span>
+                <span className="inline-block text-brb-red xl:inline">Barberia</span>{" "}
+                <span className="inline text-brb-blue xl:inline">
+                  <img
+                    alt="Barberia Olga"
+                    className="h-12 inline w-auto sm:h-14  xl:inline mx-2 mr-4"
+                    src={Logo}
+                  />
+                  Olga
+                </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                fugiat veniam occaecat fugiat aliqua.
+                Una peluquería o barbería es un local donde se ofrecen varios
+                servicios estéticos, principalmente el corte de pelo, pero
+                también suelen realizarse otros como afeitado, depilado,
+                manicura, pedicura, etc. Cuando se trata de muchos servicios
+                diferentes suele llamarse salón de belleza. La referencia más
+                antigua que se tiene sobre la existencia de cuidados cosméticos
+                en el pelo nos remite a Egipto, donde se empezaron a realizar
+                los cambios más significativos en cuanto a la cosmética capilar.
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-700 hover:animate-pulse hover:bg-gray-500 md:py-4 md:text-lg md:px-10"
                   >
-                    Get started
+                    Donde estamos
                   </a>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-300 hover:animate-pulse md:py-4 md:text-lg md:px-10"
                   >
-                    Live demo
+                    Pedir cita
                   </a>
                 </div>
               </div>
@@ -145,10 +169,10 @@ export default function Example() {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          src={Imagen}
           alt=""
         />
       </div>
     </div>
-  )
+  );
 }
