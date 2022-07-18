@@ -3,12 +3,13 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Logo from "../resources/barber.svg";
 import Imagen from "../resources/imagenhome.jpg";
+import Barb1 from "../resources/barbera1.jpg";
 import { AiFillHeart } from "react-icons/ai";
 
 //https://github.com/simonneutert/google-maps-reviews
 
 const navigation = [
-  { name: "Inicio", href: "#" },
+  { name: "Inicio", href: "/" },
   { name: "Quienes somos", href: "/quienessomos" },
   { name: "Dónde estamos", href: "#" },
 ];
@@ -123,70 +124,25 @@ export default function Home() {
             </Transition>
           </Popover>
 
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-            <div className="sm:text-center lg:text-left mb-10">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="inline-block text-brb-red xl:inline">
-                  Barberia
-                </span>{" "}
-                <span className="inline text-brb-blue xl:inline">
-                  <img
-                    alt="Barberia Olga"
-                    className="h-12 inline w-auto sm:h-14  xl:inline mx-2 mr-4"
-                    src={Logo}
-                  />
-                  Olga
-                </span>
-              </h1>
-              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Una peluquería o barbería es un local donde se ofrecen varios
-                servicios estéticos, principalmente el corte de pelo, pero
-                también suelen realizarse otros como afeitado, depilado,
-                manicura, pedicura, etc. <br />
-                <br />
-                Cuando se trata de muchos servicios diferentes suele llamarse
-                salón de belleza. La referencia más antigua que se tiene sobre
-                la existencia de cuidados cosméticos en el pelo nos remite a
-                Egipto, donde se empezaron a realizar los cambios más
-                significativos en cuanto a la cosmética capilar.
-              </p>
-              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div className="rounded-md shadow">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-700 hover:animate-pulse hover:bg-gray-500 md:py-4 md:text-lg md:px-10"
-                  >
-                    Donde estamos
-                  </a>
-                </div>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-300 hover:animate-pulse md:py-4 md:text-lg md:px-10"
-                  >
-                    Pedir cita
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="mt-36 content-center">
-              <p className="text-sm  text-gray-500 sm:mt-5 sm:text-sm sm:max-w-xl sm:mx-auto md:mt-5 md:text-sm lg:mx-0">
-                Opiniones
-              </p>{" "}
-              <p className="inline mt-3 text-xs text-gray-500 sm:mt-5 sm:text-xs sm:max-w-xl sm:mx-auto md:mt-5 md:text-xs lg:mx-0">
-                Porque nos importa tu opinion! 
-              </p>
-            </div>
-          </main>
+          <div className="mt-36 ml-20">
+            <span className="inline-block">
+              <img
+                alt="Barberia Olga"
+                className="h-80 rounded-2xl shadow-2xl"
+                src={Barb1}
+              />
+              Olga
+            </span>
+            <span className="inline-block">
+              <img
+                alt="Barberia Olga"
+                className="h-80 rounded-2xl shadow-2xl"
+                src={Barb1}
+              />
+              Olga
+            </span>
+          </div>
         </div>
-      </div>
-
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src={Imagen}
-          alt=""
-        />
       </div>
     </div>
   );
