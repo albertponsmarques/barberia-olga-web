@@ -10,7 +10,7 @@ import { AiFillHeart } from "react-icons/ai";
 const navigation = [
   { name: "Inicio", href: "#" },
   { name: "Quienes somos", href: "/quienessomos" },
-  { name: "Dónde estamos", href: "#" },
+  { name: "Dónde estamos", href: "/dondeestamos" },
 ];
 
 export default function Home() {
@@ -63,7 +63,7 @@ export default function Home() {
                     </a>
                   ))}
                   <a
-                    href="#"
+                    href="/cita"
                     className="text-lg font-extrabold text-brb-red hover:text-brb-blue hover:animate-pulse"
                   >
                     Pedir cita
@@ -112,12 +112,6 @@ export default function Home() {
                       </a>
                     ))}
                   </div>
-                  <a
-                    href="#"
-                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 "
-                  >
-                    Log in
-                  </a>
                 </div>
               </Popover.Panel>
             </Transition>
@@ -174,7 +168,7 @@ export default function Home() {
                 Opiniones
               </p>{" "}
               <p className="inline mt-3 text-xs text-gray-500 sm:mt-5 sm:text-xs sm:max-w-xl sm:mx-auto md:mt-5 md:text-xs lg:mx-0">
-                Porque nos importa tu opinion! 
+                Porque nos importa tu opinion!
               </p>
             </div>
           </main>

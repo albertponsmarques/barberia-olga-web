@@ -6,15 +6,14 @@ import Imagen from "../resources/imagenhome.jpg";
 import Barb1 from "../resources/barbera1.jpg";
 import { AiFillHeart } from "react-icons/ai";
 
-//https://github.com/simonneutert/google-maps-reviews
 
 const navigation = [
   { name: "Inicio", href: "/" },
   { name: "Quienes somos", href: "/quienessomos" },
-  { name: "Dónde estamos", href: "#" },
+  { name: "Dónde estamos", href: "/dondeestamos" },
 ];
 
-export default function Home() {
+export default function Header() {
   return (
     <div className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -64,7 +63,7 @@ export default function Home() {
                     </a>
                   ))}
                   <a
-                    href="#"
+                    href="/cita"
                     className="text-lg font-extrabold text-brb-red hover:text-brb-blue hover:animate-pulse"
                   >
                     Pedir cita
@@ -113,12 +112,6 @@ export default function Home() {
                       </a>
                     ))}
                   </div>
-                  <a
-                    href="#"
-                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 "
-                  >
-                    Log in
-                  </a>
                 </div>
               </Popover.Panel>
             </Transition>

@@ -7,7 +7,7 @@ import Barb1 from "../resources/barbera1.jpg";
 import { AiFillHeart } from "react-icons/ai";
 import Header from "./Header";
 
-export default function Home() {
+export default function Who() {
   return (
     <div>
       <Header />
