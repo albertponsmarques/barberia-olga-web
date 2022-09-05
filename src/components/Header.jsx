@@ -14,7 +14,7 @@ const navigation = [
 
 export default function Header() {
   return (
-    <div className="relative bg-black overflow-hidden">
+    <div className="relative bg-black overflow-hidden z-50">
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-8 bg-black sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           <Popover>

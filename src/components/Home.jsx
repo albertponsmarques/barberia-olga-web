@@ -1,10 +1,11 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import Logo from "../resources/barber.svg";
+import Logo from "../resources/logotest.jpg";
 import Imagen from "../resources/barb.jpeg";
 import Lgbt from "../resources/lgbt.png";
 import Wheel from "../resources/wheelchair.png";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 //https://github.com/simonneutert/google-maps-reviews
 
@@ -47,8 +48,10 @@ export default function Home() {
                         />
                       </a>
                       <div className="-mr-2 flex items-center md:hidden">
-                        <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                          <span className="sr-only">Open main menu</span>
+                        <Popover.Button className="bg-black rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                          <span className="sr-only text-white">
+                            Open main menu
+                          </span>
                           <MenuIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
                       </div>
@@ -97,8 +100,10 @@ export default function Home() {
                         />
                       </div>
                       <div className="-mr-2">
-                        <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                          <span className="sr-only">Close main menu</span>
+                        <Popover.Button className="bg-black rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                          <span className="sr-only text-white">
+                            Close main menu
+                          </span>
                           <XIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
                       </div>
@@ -121,13 +126,13 @@ export default function Home() {
 
             <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
               <div className="sm:text-center lg:text-left mb-10">
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-200 sm:text-5xl md:text-6xl">
+                <h1 className="text-5xl tracking-tight font-extrabold text-gray-200 sm:text-5xl md:text-6xl">
                   <span className="inline-block text-white xl:inline">
                     Barberia
                   </span>{" "}
                   <span className="inline text-white xl:inline">Olga</span>
                 </h1>
-                <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                <p className="mt-8 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   Una peluquería o barbería es un local donde se ofrecen varios
                   servicios estéticos, principalmente el corte de pelo, pero
                   también suelen realizarse otros como afeitado, depilado,
@@ -140,9 +145,16 @@ export default function Home() {
                   significativos en cuanto a la cosmética capilar.
                 </p>
               </div>
-              <div className="mt-44 content-center">
-                <img className="h-32 inline-block mr-10" src={Lgbt} />
-                <img className="h-32 inline-block" src={Wheel} />
+              <div className="text-center mt-12 md:hidden bg:hidden">
+                <Link to="/cita">
+                  <button class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
+                    Pide cita aquí
+                  </button>
+                </Link>
+              </div>
+              <div className="mt-[20%] content-center">
+                <img className="h-24 inline-block mr-[15%] " src={Lgbt} />
+                <img className="h-24 inline-block" src={Wheel} />
               </div>
             </main>
           </div>

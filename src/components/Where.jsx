@@ -11,11 +11,14 @@ export default function Where() {
           <h1 className="text-white text-center text-4xl antialiased font-semibold">
             Dónde estamos?
           </h1>
+          <h2 className="text-white text-sm text-center">
+            Haz click en el mapa para mas info
+          </h2>
           <div className="md:inline-flex my-10 shadow rounded w-full  justify-center">
             <a href="https://goo.gl/maps/pECVWG7tntWgZ5iKA" target="_blank">
               <img
                 alt="mapa"
-                className="object-none object-center h-106 "
+                className="object-none object-center md:h-106 lg:h-106 md:visible lg:visible"
                 src={Mapa}
               />
             </a>
